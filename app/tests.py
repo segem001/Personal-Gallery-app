@@ -111,3 +111,31 @@ class ImageTestClass(TestCase):
         self.assertTrue(isinstance(self.image, Image))
 
 
+    def test_save_method(self):
+        """Testing save Method"""
+        self.image.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
+
+    def test_update_method(self):
+        """Testing Update Method"""
+        self.image.update_image(image_name='lorem2', image_description='Another Lorem2 description',
+                                image='lorem2.png', location=self.place, category=self.category)
+        image = Image.objects.all()
+        self.assertTrue(len(image) > 0)
+
+    def test_delete_method(self):
+        """Testing delete Method"""
+        self.image.delete_image()
+        image = Image.objects.all()
+        self.assertTrue(len(image) < 1)
+
+
+    def test_search_image(self):
+        """Testing search image Method"""
+        self.found_image = Image.search_image("fashion")
+
+    def test_filter_by_location(self):
+        """Testing filter_by_location Method"""
+        self.found_location = Image.filter_by_location("1")
+
