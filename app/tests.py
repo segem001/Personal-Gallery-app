@@ -106,3 +106,8 @@ class ImageTestClass(TestCase):
                            )
         self.image.save_image()
 
+    def test_instance(self):
+        """Testing instance"""
+        self.assertTrue(isinstance(self.image, Image))
+
+
