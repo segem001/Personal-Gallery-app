@@ -20,7 +20,7 @@ and location of the image.
 ## Running the Application
 * To run the application, in your terminal:
 
-        $ ./start.sh
+        $ 
 ## Technologies Used
 * Python3.8
 * Bootstrap flask
