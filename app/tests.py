@@ -33,3 +33,10 @@ class LocationTestClass(TestCase):
         self.assertTrue(len(places) > 0)
 
 
+    def test_delete_method(self):
+        """Testing delete Method"""
+        self.place.delete_location()
+        places = Location.objects.all()
+        self.assertTrue(len(places) < 1)
+
+
