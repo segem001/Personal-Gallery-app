@@ -14,13 +14,13 @@ and location of the image.
 ### Setup Instructions
 * In your terminal:
         
-        $ git clone 
+        $ git clone https://galleryalbumset.herokuapp.com/
         
 
 ## Running the Application
 * To run the application, in your terminal:
 
-        $ 
+        $ python3 manage.py runserver
 ## Technologies Used
 * Python3.8
 * Bootstrap flask
